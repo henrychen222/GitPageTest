@@ -1,0 +1,457 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+}
+
+#hint {
+    color: red;
+    font-weight:bold
+}
+
+#sefie {
+    position: absolute;
+    top: 80px;
+    right: 0;
+   
+}
+
+#weichen {
+    text-align: center;
+}
+
+#date {
+    padding-left:100px;
+}
+
+#second {
+    padding-left:150px;
+}
+
+#third {
+    padding-left:150px;
+}
+
+#award {
+    padding-left:10px;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#italic {
+    font-style: italic;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+/*programming language*/
+
+#java {
+  width: 90%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#kotlin {
+  width: 70%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#js {
+  width: 95%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#ts {
+  width: 75%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#py {
+  width: 85%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#php {
+  width: 80%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#perl {
+  width: 70%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#cxx {
+  width: 70%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#csharp {
+  width: 80%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#r {
+  width: 80%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#swift {
+  width: 60%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+#oc {
+  width: 60%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/*database*/
+#mysql {
+  width: 85%;
+  height: 20px;
+  background-color: #9ACD32;
+  text-align: center
+}
+
+#mongodb {
+  width: 85%;
+  height: 20px;
+  background-color: #9ACD32;
+  text-align: center
+}
+
+#oracle {
+  width: 80%;
+  height: 20px;
+  background-color: #9ACD32;
+  text-align: center
+}
+
+#sqlite {
+  width: 75%;
+  height: 20px;
+  background-color: #9ACD32;
+  text-align: center
+}
+
+#redis {
+  width: 70%;
+  height: 20px;
+  background-color: #9ACD32;
+  text-align: center
+}
+
+/*web development*/
+#html {
+  width: 90%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#css {
+  width: 90%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#bootstrap {
+  width: 80%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#ajax {
+  width: 75%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#jquery {
+  width: 70%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#angular {
+  width: 30%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#restful {
+  width: 60%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#googlemap {
+  width: 60%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#react {
+  width: 70%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#gulp {
+  width: 50%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#sass {
+  width: 50%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+#socket {
+  width: 50%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/*android development*/
+#android_studio {
+  width: 95%;
+  height: 20px;
+  background-color: #F4A460;
+  text-align: center
+}
+
+#gradle {
+  width: 90%;
+  height: 20px;
+  background-color: #F4A460;
+  text-align: center
+}
+
+/*system*/
+#mac {
+  width: 90%;
+  height: 20px;
+  background-color: #FFDEAD;
+  text-align: center
+}
+
+#linux {
+  width: 90%;
+  height: 20px;
+  background-color: #FFDEAD;
+  text-align: center
+}
+
+#windows {
+  width: 85%;
+  height: 20px;
+  background-color: #FFDEAD;
+  text-align: center
+}
+
+
+/*server and frameworks*/
+#apache {
+  width: 90%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+#express {
+  width: 90%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+#laravel {
+  width: 50%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+#django {
+  width: 60%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+/*Some other IDE/text editor I like*/
+#vscode {
+  width: 90%;
+  height: 20px;
+  background-color: #A0522D;
+  text-align: center
+}
+
+#sublime {
+  width: 85%;
+  height: 20px;
+  background-color: #A0522D;
+  text-align: center
+}
+
+#pycharm {
+  width: 70%;
+  height: 20px;
+  background-color: #A0522D;
+  text-align: center
+}
+
+#xcode {
+  width: 70%;
+  height: 20px;
+  background-color: #A0522D;
+  text-align: center
+}
+
+/*java development*/
+#eclipse {
+  width: 90%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#tomcat {
+  width: 75%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#jdbc {
+  width: 85%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#jspservlet {
+  width: 80%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#spring {
+  width: 80%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#javafx {
+  width: 60%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+
+/*big data*/
+#hadoop {
+  width: 80%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#hdfs {
+  width: 70%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#mapreduce {
+  width: 70%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#zookeeper {
+  width: 40%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#spark {
+  width: 20%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#hbase {
+  width: 20%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+#hive {
+  width: 20%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+
+
+
+
+
+
+/*th {*/
+/*    text-align: left;*/
+/*}*/
