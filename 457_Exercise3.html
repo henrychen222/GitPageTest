@@ -1,0 +1,694 @@
+<html>
+ <head>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" type="text/css"
+    href="http://wenchen.cs.und.edu/css/2.css" />
+  <link href='http://wenchen.cs.und.edu/SyntaxHighlighter/shCore.css' rel='stylesheet' type='text/css'/>
+  <link href='http://wenchen.cs.und.edu/SyntaxHighlighter/shThemeDefault.css' rel='stylesheet' type='text/css'/>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shCore.js' type='text/javascript'></script>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shBrushJava.js' type='text/javascript'></script>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shBrushHtml.js' type='text/javascript'></script>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shBrushXml.js' type='text/javascript'></script>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shBrushDtd.js' type='text/javascript'></script>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shBrushPhp.js' type='text/javascript'></script>
+  <script src='http://wenchen.cs.und.edu/SyntaxHighlighter/shBrushJScript.js' type='text/javascript'></script>
+
+  <script language='javascript'> 
+   SyntaxHighlighter.config.bloggerMode = true;
+   SyntaxHighlighter.config.clipboardSwf = 'http://wenchen.cs.und.edu/SyntaxHighlighter/clipboard.swf';
+   SyntaxHighlighter.all( );
+  </script> 
+
+  <title>Programming Exercise III: A location-based service (LBS) using AJAX and HTML5 technologies</title>
+ </head>
+
+ <body text="#000000" vLink="#3366CC" link="#3366CC" bgColor="#ffffff" alink="#3366CC" background="http://wenchen.cs.und.edu/figure/bg87.png">
+
+<center>
+ <font color="#3366CC" face="Helvetica" size="+2">
+  <b>Programming Exercise III:<br />
+  A Location-Based Service (LBS) Using AJAX and HTML5 Technologies</b>
+ </font><br class="s" />
+ <font face="comic sans ms" color="#3366CC" size="+1">
+  <b>(Industry-Level, Second-to-None Comprehensive Specifications)</b>
+ </font>
+</center>
+
+<hr color="#3366CC" size="4" noshade>
+<br class="s" />
+
+<center>
+ <font color="#3366CC" face="Helvetica" size="+1">
+  <b><blink>Absolutely no copying others’ works</blink></b>
+ </font>
+</center>
+<br class="m" />
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Development Requirements</b>
+</font><br />
+
+When start developing the exercise, follow the two requirements below:
+
+<ul>
+ <li>Have to use the LAMP and AJAX technologies.
+ </li>
+
+ <li>The system entry page must be located at <nobr><code>http://people.aero.und.edu/~userid/457/3/</code></nobr> and all pages must be hosted by <nobr><code>http://people.aero.und.edu/~userid/</code></nobr> .
+ </li>
+
+</ul>
+
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Due Date and Submission Methods</b>
+</font><br />
+
+Due on or before Wednesday, May 03, 2017 in class and have completed the following two tasks: 
+
+<ul>
+ <li>Turn in
+
+<ul> 
+ <li>printouts of all source code including C/C++, (X)HTML, Java, JavaScript, JDBC, Perl, PHP, PL/SQL, Unix shell, SQL (especially <code>create</code> commands), XML, and whatever languages<sup>&#8224;</sup>,
+ </li>
+ <li>the password for displaying the source code online (only one password for all interfaces and all exercises and the code will be examined during the demonstration too), and
+ </li>
+ <li>a report (single spacing and no more than five pages) with the following sections:
+  <br /><br class="e" />
+
+<table width="100%" cellspacing="0" cellpadding="0">
+ <tr>
+  <td>
+   <ol>
+    <li>Title</li>
+    <li>Introduction</li>
+    <li>Literature review</li>  
+   </ol> 
+  </td> 
+  <td>
+   <ol start="4">
+    <li>System structure</li>
+    <li>The methods applied</li>
+    <li>Experiment results</li>
+   </ol>
+  </td> 
+  <td> 
+   <ol start="7">
+    <li>Conclusion</li>
+    <li>References</li>
+    <li>Appendix: User manual</li>
+   </ol>
+  </td>
+ </tr>
+</table>
+   </li>
+  </ul>
+ </li><br class="s" />
+  
+ <li>Send an email to the instructor at <a href="mailto:wenchen@cs.und.edu">wenchen@cs.und.edu</a> to set up an appointment to demonstrate your exercise to the instructor individually, so misunderstanding would be minimized.
+  The mail lists the times you will be available.
+ </li>
+</ul>
+
+<sup>&#8224;</sup>Note that you are allowed to use any languages and tools for this exercise, but the exams will focus on LAMP and AJAX technologies unless otherwise specified.
+
+<br /><br class="m" />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Objectives</b>
+</font><br />
+
+Design and implement a location-based service (LBS) using HTML5, LAMP, and AJAX technologies.
+
+Two themes of this exercise are (i) using HTML5 and LAMP to create a location-based service and (ii) using AJAX to make the LBS more interactive, interesting, and user-friendly.
+
+<br /><br class="s" />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<table cellspacing="0" width="100%" cellpadding="0">
+ <tr>
+  <td>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>AJAX (Asynchronous JavaScript and XML)</b>
+</font><br />
+
+The AJAX is used to create advanced web applications.
+
+It is the art of exchanging data with a server, and updating parts of a web page&mdash;without reloading the whole page.
+
+AJAX is not a new programming language, but a new way to use existing standards.
+
+The technologies include:
+
+<ul>
+ <li>HTML,</li>
+ <li>JavaScript,</li>
+ <li>XML, and</li>
+ <li>MySQL database.</li>
+</ul>
+
+  </td>
+  <td width="5%"></td>  
+  <td>
+   <img src="http://wenchen.cs.und.edu/course/457/exercise/3/ajax.png" border="1" class="shadow" />
+  </td>
+ </tr>
+</table>
+
+<br />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Location-Based Service (LBS)</b>
+</font><br />
+
+A system structure of generic location-based services includes five major components:
+
+<ol type="a">
+ <li><em>Mobile handheld devices</em>, which are small computers that can be held in one hand.  
+  For most cases, they are smartphones. 
+  However, desktop computers will be used to grade and demonstrate this exercise instead.
+ </li>
+ <li><em>Positioning system</em>, which is a navigation satellite system that provides location and time information to anyone with a receiver.
+  This exercise uses HTML5 Geolocation to find the users&#8217; locations.
+ </li>
+ <li><em>Mobile and wireless networks</em>, which relay the query and location information from devices to service providers and send the results from the providers to devices.
+ </li>
+ <li><em>Service providers</em>, which provide the location-based services such as location-aware advertisements.
+ </li>
+ <li><em>Geographical data providers</em>, which are databases storing a huge amount of geographical data such as information about restaurants and gas stations.
+  One example is <a href="http://www.geonames.org/">GeoNames</a>.
+ </li>
+</ol>
+
+<center>
+ <img src="LBS.jpg" border="2" class="shadow" />
+</center>
+<br class="s" />
+
+One example of LCSs is <a href="https://foursquare.com/">Foursquare</a>.
+
+<br /><br class="m" />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>HTML5 Geolocation</b>
+</font><br />
+
+The HTML5 Geolocation API allows the web page to receive the geographical position of a mobile user pending permission.  
+
+The following demonstration shows how to (i) get the user&#8217;s latitude and longitude, (ii) mark the user&#8217;s position on a map, and (iii) draw a route between two locations.
+
+<br /><br class="s" />
+
+<!=======================================================================!>
+<center>
+ <iframe width="90%" height="350" align="center" src="select.html" border="2">
+ </iframe>
+</center>
+<br />
+
+The following program shows how to find the user’s current latitude and longitude:
+
+<br /><br class="s" />
+
+<center>
+ <table width="90%" border="0" bgcolor="navy" cellpadding="2" cellspacing="2" class="shadow">
+  <tr bgcolor="#3366CC">
+   <th>
+     <font color="white" face="Helvetica" size="+1">
+      <code>getCoord.html</code>
+     </font>
+   </th>
+  </tr>
+
+  <tr bgcolor="#FFFFFF">
+   <td>
+
+<pre class="brush:jscript">&lt;!DOCTYPE HTML>
+&lt;html>
+ &lt;body>
+  Click the button to get your coordinates: &nbsp;
+  &lt;button onclick="getLocation( )">Get Them!&lt;/button>
+  &lt;p id="demo">&lt;/p>
+
+  &lt;script>
+   var  x = document.getElementById( "demo" );
+
+   function  getLocation( ) {
+    if ( navigator.geolocation ) 
+     navigator.geolocation.getCurrentPosition( showPosition, showError );
+    else
+     x.innerHTML = "Geolocation is not supported by this browser.";
+   }
+
+   function  showPosition( position ) {
+    x.innerHTML  = "Latitude: "  + position.coords.latitude; 
+    x.innerHTML += "Longitude: " + position.coords.longitude;
+   }
+
+   function  showError( error ) {
+    switch ( error.code ) {
+     case error.PERMISSION_DENIED:
+      x.innerHTML = "User is denied the request for Geolocation.";
+      break;
+     case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable.";
+      break;
+     case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out.";
+      break;
+     case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred.";
+      break;
+    }
+   }
+  &lt;/script>
+ &lt;/body>
+&lt;/html></pre>
+   </td>
+  </tr>
+ </table>
+</center>
+<br />
+
+The following program shows how to build map mashups:
+
+<br /><br class="s" />
+<center>
+ <table width="90%" border="0" bgcolor="navy" cellpadding="2" cellspacing="2" class="shadow">
+  <tr bgcolor="#3366CC">
+   <th>
+     <font color="white" face="Helvetica" size="+1">
+      <code>markMap.html</code>
+     </font>
+   </th>
+  </tr>
+
+  <tr bgcolor="#FFFFFF">
+   <td>
+
+<pre class="brush:jscript">&lt;!DOCTYPE HTML>
+&lt;html>
+ &lt;body>
+  Click the button to mark your position:
+  &lt;button onclick="getLocation( )">Mark It!&lt;/button>
+  &lt;p id="mapholder">&lt;/p>
+
+  &lt;script src="http://maps.google.com/maps/api/js?sensor=false">&lt;/script>
+  &lt;script>
+   var  mapholder = document.getElementById( "mapholder" );
+
+   function  getLocation( ) {
+    if ( navigator.geolocation )
+     navigator.geolocation.getCurrentPosition( showPosition, showError );
+    else
+     mapholder.innerHTML = "Geolocation is not supported by this browser.";
+   }
+
+   function  showPosition( position ) {
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
+    latlon = new google.maps.LatLng( lat, lon );
+    mapholder.style.height ='400px';
+    mapholder.style.width  ='700px';
+
+    var  myOptions = {
+     center: latlon,
+     zoom: 14,
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     mapTypeControl: false,
+     navigationControlOptions: {
+      style: google.maps.NavigationControlStyle.SMALL
+     }
+    };
+
+    var  map = new google.maps.Map( document.getElementById( "mapholder" ), myOptions );
+    var  marker = new google.maps.Marker( {
+     position: latlon,
+     map: map,
+     title: "You are here!" }
+    );
+   }
+
+   function  showError( error ) {
+    switch( error.code ) {
+     case error.PERMISSION_DENIED:
+      mapholder.innerHTML = "User is denied the request for Geolocation.";
+      break;
+     case error.POSITION_UNAVAILABLE:
+      mapholder.innerHTML = "Location information is unavailable.";
+      break;
+     case error.TIMEOUT:
+      mapholder.innerHTML = "The request to get user location timed out.";
+      break;
+     case error.UNKNOWN_ERROR:
+      mapholder.innerHTML = "An unknown error occurred.";
+      break;
+    }
+   }
+  &lt;/script>
+ &lt;/body>
+&lt;/html></pre>
+   </td>
+  </tr>
+ </table>
+</center>
+<br />
+
+The following program shows how to draw a direction:
+
+<br /><br class="s" />
+<center>
+ <table width="90%" border="0" bgcolor="navy" cellpadding="2" cellspacing="2" class="shadow">
+  <tr bgcolor="#3366CC">
+   <th>
+     <font color="white" face="Helvetica" size="+1">
+      <code>direction.html</code>
+     </font>
+   </th>
+  </tr>
+
+  <tr bgcolor="#FFFFFF">
+   <td>
+
+<pre class="brush:jscript">&lt;!DOCTYPE HTML>
+&lt;html>
+ &lt;head>
+  &lt;script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+  &lt;/script>
+  &lt;script>
+   var  directionDisplay;
+   var  directionsService = new google.maps.DirectionsService( );
+   var  map;
+
+   function  initialize( ) {
+    directionsDisplay = new google.maps.DirectionsRenderer( );
+    var  GF = new google.maps.LatLng( 47.92525699999999, -97.032855 );
+    var  mapOptions = {
+     zoom: 14,
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     center: GF
+    }
+    map = new google.maps.Map( document.getElementById('map_canvas'), mapOptions);
+    directionsDisplay.setMap( map );
+   }
+
+   function calcRoute( ) {
+    var  start = document.getElementById('start').value;
+    var  end   = document.getElementById('end').value;
+    var  request = {
+     origin: start,
+     destination: end,
+     travelMode: google.maps.DirectionsTravelMode.WALKING
+    };
+    directionsService.route( request, function( response, status ) {
+     if ( status == google.maps.DirectionsStatus.OK )
+      directionsDisplay.setDirections( response );
+     } );
+   }
+  &lt;/script>
+ &lt;/head>
+
+ &lt;body onload="initialize( )">
+  &lt;div>
+   Start:
+   &lt;select id="start" onChange="calcRoute( );">
+    &lt;option value="streibel hall, und, nd">Streibel Hall&lt;/option>
+    &lt;option value="ray richards golf course, grand forks, nd">Ray Richards&lt;/option>
+    &lt;option value="ralph engelstad arena,nd">The Ralph&lt;/option>
+    &lt;option value="university park, grand forks, nd">University Park&lt;/option>
+    &lt;option value="cabela, east grand forks, mn">Cabela&lt;/option>
+    &lt;option value="city hall, grand forks, nd">City Hall&lt;/option>
+    &lt;option value="columbia mall, grand forks, nd">Columbia Mall&lt;/option>
+   &lt;/select>
+
+   End:
+   &lt;select id="end" onChange="calcRoute( );">
+    &lt;option value="ray richards golf course, grand forks, nd">Ray Richards&lt;/option>
+    &lt;option value="ralph engelstad arena,nd">The Ralph&lt;/option>
+    &lt;option value="university park, grand forks, nd">University Park&lt;/option>
+    &lt;option value="streibel hall, und, nd">Streibel Hall&lt;/option>
+    &lt;option value="cabela, east grand forks, mn">Cabela's&lt;/option>
+    &lt;option value="city hall, grand forks, nd">City Hall&lt;/option>
+    &lt;option value="columbia mall, grand forks, nd">Columbia Mall&lt;/option>
+   &lt;/select>
+  &lt;/div>
+  &lt;div id="map_canvas" style="width:96%;height:400px">&lt;/div>
+ &lt;/body>
+&lt;/html></pre>
+   </td>
+  </tr>
+ </table>
+</center>
+
+<br /><br class="e" />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Requirements</b>
+</font><br />
+
+This is an open exercise, so the requirements are loosened.
+
+This system consists of two themes: (i) location-based services and (ii) AJAX.
+
+The proposed location-based service includes the following features:
+
+<ul>
+ <li><b>[Location-based service (LBS): 50% total]</b><br />
+  The LBS proposed by you should provide services to the Grand Forks area, so the instructor can actually test it.
+  The requirements of your LBS are as follows:
+  <br /><br class="e" />
+  <ul>
+   <li>(<i>Ideas: 05%</i>)
+    Design your own LBS.
+    The emphases are (i) creativeness and (ii) usefulness.
+    Location-based services are popular and useful.  
+    Some examples of LBS are finding the nearby gas stations or ethnic restaurants, comparing product prices from local stores, location-aware advertising, locating people or events, finding the best bus schedules, to name a few.
+    Explain your LBS ideas in the report.
+    Try not to be too ambitious at first and make sure they are doable.
+   </li><br class="e" />
+
+   <li>(<i>Implementation: 45%</i>)
+    LBSs are part of electronic or mobile commerce, so their implementation are similar.
+    The requirements include:
+    <br /><br class="e" />
+    <ul>
+     <li>Enter geographical data into a database before starting testing.
+     </li>
+     <li>Handle location-based queries.
+     </li>
+     <li>Generate results based on users’ locations and stored geographical data.
+     </li>
+     <li>Give recommendations including map mashups such as markers and/or directions.
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>[Asynchronous JavaScript and XML (AJAX): 35%]</b><br />
+  AJAX is to make the web applications more interactive and user-friendly, and maybe speedy.
+  <br /><br class="e" />
+  <ul>
+   <li>The emphases are (i) number of AJAX applications, (ii) interactiveness, and (iii) user-friendliness.
+   </li>
+   <li>The more AJAX applications are applied, the higher score you will receive.
+    The following rankings are usually used by the instructor:
+    <br /><br class="e" />
+
+    <ul>
+     <li>Excellent if 6 or more different AJAX applications are used,</li>
+     <li>Very good if 5 AJAX different applications are used,</li>
+     <li>Good if 4 AJAX different applications are used,</li>
+     <li>Fair if 3 AJAX different applications are used,</li>
+     <li>Not good if 2 AJAX different applications are used, and</li>
+     <li>Poor if no or 1 AJAX application is used.</li>
+    </ul>
+   </li><br class="e" />
+
+   <li>The AJAX applications applied have to make sense and be used effectively because some students simply included AJAX in their exercises without advantages in the past.
+    Otherwise, they will not be counted.
+  </ul>
+ </li><br class="m" />
+
+ <li><b>(Instructor’s requirements: 15% total)</b><br />
+  Other than the above system requirements, the instructor has the following requirements:
+  <br /><br class="e" />
+  <ul>
+   <li>(<i>User-friendliness: 10%</i>)
+     User-friendliness will be heavily considered when grading.
+     In the past, some exercises were awkward, which made the grading or browsing difficult.
+     For example, it is considered not user-friendly if the system repeatedly asks users to enter their names/IDs/passwords.
+   </li><br class="e" />
+
+   <li>(<i>Plagiarism-proof: 05%</i>)
+    It is for the instructor to find any plagiarism.
+    Each interface includes a button &#8220;Display source,&#8221; which is to list ALL the source code for implementing the functions of THIS interface.
+    Only one password is for all interfaces and all exercises.
+    The system will be highly suspected if fail to implement this button.
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<br class="e" />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!==================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Evaluations</b> 
+</font><br /> 
+ 
+The following features will be considered when grading:
+ 
+<ul>
+
+ <li><b>Specifications:</b>
+  <ul>
+   <li>The instructor (or your assumed client) has given the exercise specifications as detailedly as possible.
+    If you are confused about the specifications, you should ask in advance.
+    Study the specifications very carefully.
+    No excuses for misunderstanding or missing parts of the specifications after grading.
+   </li>
+   <li>This is an open exercise, so the specifications is not detailed.
+    Design your own LBS and AJAX applications.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>Grading:</b>
+  <ul>
+   <li>This exercise will not be graded if the submission methods are not met.
+    Students take full responsibility if the website is not working. 
+   </li>
+
+   <li>The location information provided by the HTML5 Geolocation may not be as
+ precise as the one by GPS or may not be available.
+    In addition, <em>we will not do the actual road testing and desktop computers will be used during the demonstration</em>.
+    Your LBS should have a backup plan for this; for example, mock-up locations can be entered and used.
+   </li>
+
+   <li>This is an open exercise.
+    Therefore, the grading of this exercise is subjective and is based on comparison.
+    The instructor will try to grade the exercises as fairly as possible.
+   </li>
+
+   <li>The grading is mainly based on the testing results.
+    Other factors such as performance, programming styles, algorithms, and data structures will be only considered minimally.
+    Exercises of undergraduate and graduate students are graded/compared separately.
+   </li>
+
+   <li>Before submitting the exercise, test it comprehensively.
+    Absolutely no extra points will be given after grading.
+   </li>
+
+   <li>The total weight of exercises is 36% of final grade and all three exercises have the same weight, 12% each.
+   </li>
+
+   <li>The instructor may check your system from different locations at Grand Forks and by using different ISPs (Internet Service Providers).
+    Make sure your system works correctly for different locations and ISPs.
+   </li>
+
+   <li>Firefox 51 or above browser will be used to grade exercises.
+    Note that Internet Explorer, Chrome, and Firefox are not compatible.
+    That is your exercises may work on the IE or Chrome but not Firefox. 
+   </li>
+
+   <li>The systems have to be active and the source-code printouts and reports will be kept until the end of this semester.
+    They will be re-checked for plagiarism from time to time.
+    The instructor will inform you the exercise evaluations by emails after grading.
+   </li>
+
+  </ul>
+ </li><br class="m" />
+
+
+ <li><b>Databases:</b>
+  <ul>
+   <li>A database has to be used and try to perform the tasks by using SQL as much as possible because SQL, a non-procedural language, can save you a great deal of programming effort.
+   </li>
+
+   <li>The SQL DDL commands such as &#8220;<code>create table</code>&#8221; have to be submitted, where SQL is Structured Query Language and DDL is Data Definition Language.
+   </li>
+
+   <li>From the source code submitted, the database design and programs will be examined.
+    Poor database design or uses will result in a lower grade.
+   </li>
+
+   <li><b>(-05%)</b> if the database design is NOT optimal.
+   </li>
+
+   <li><b>(-05%)</b> if the SQL <code>create</code> commands of database implementation are NOT submitted.
+   </li>
+
+   <li>There are many advantages of using databases.
+    If database is not used, the problems caused by not-using-transaction must be considered.
+    For example, if two customers are enrolled at the same time, an ID may be assigned to different customers if databases are not used.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+
+ <li><b>Comments:</b>
+  <ul>
+   <li>Make the exercise work first.
+    Do not include irrelevant features, such as user passwords, in the beginning.
+   </li>
+
+   <li>One way to build a complex web system from scratch is to design the user interfaces first and then implement the system button by button.
+    By doing this way, it could simplify the construction. 
+    The recommended construction steps are
+
+    <br /><br class="s" />
+    <ol type="i">
+     <li>Database design (E-R modeling or normalization),</li>
+     <li>Database implementation (SQL),</li>
+     <li>Interface building (HTML and CSS), and</li>
+     <li>Button-by-button implementation (PHP).</li>
+    </ol><br class="s" />
+   </li>
+
+   <li>Many times, simplicity is the same as user-friendliness. 
+   </li>
+
+   <li>Security concerns are mainly ignored here.
+    For example, a customer may be able to check others’ account information if protection is not enforced.
+    Small or medium -size businesses do not usually implement their own secure payment schemes.
+    Instead they use a third-party payment system such as <a href="http://www.paypal.com">PayPal</a> or purchase software from company like <a href="http://www.cayan.com">Cayan</a> and integrate it with their websites.
+   </li>
+
+   <li>The function of automatically sending emails is important for e-commerce systems, but will not be used here since companies complained our students sending out numerous mails because of faulty programs.
+   </li>
+  </ul>
+ </li>
+
+</ul>
+
+  <br /><br /><br /><br /><br />
+ </body>
+</html>
+

@@ -9,11 +9,29 @@ body {
     font-weight:bold
 }
 
-#sefie {
+#pic1 {
     position: absolute;
-    top: 80px;
-    right: 0;
+    top: 50px;
+    right:10px;
    
+}
+
+#pic2 {
+  position: absolute;
+  top: 50px;
+  right:210px;
+}
+
+#pic3 {
+  position: absolute;
+  top: 330px;
+  right:10px;
+}
+
+#pic4 {
+  position: absolute;
+  top: 330px;
+  right:210px;
 }
 
 #weichen {
@@ -51,345 +69,409 @@ body {
 
 /*programming language*/
 
+/* 3 year */
 #java {
-  width: 90%;
+  width: 60%;
   height: 20px;
   background-color: #4CAF50;
-  text-align: center
+  text-align: center;
 }
 
-#kotlin {
-  width: 70%;
-  height: 20px;
-  background-color: #4CAF50;
-  text-align: center
-}
-
+/* 3 year */
 #js {
-  width: 95%;
+  width: 60%;
   height: 20px;
   background-color: #4CAF50;
   text-align: center
 }
 
+/* 0.5 year */
 #ts {
-  width: 75%;
+  width: 10%;
   height: 20px;
   background-color: #4CAF50;
   text-align: center
 }
 
+/* 0.5 year */
 #py {
-  width: 85%;
+  width: 10%;
   height: 20px;
   background-color: #4CAF50;
   text-align: center
 }
 
-#php {
-  width: 80%;
-  height: 20px;
-  background-color: #4CAF50;
-  text-align: center
-}
-
-#perl {
-  width: 70%;
-  height: 20px;
-  background-color: #4CAF50;
-  text-align: center
-}
-
-#cxx {
-  width: 70%;
-  height: 20px;
-  background-color: #4CAF50;
-  text-align: center
-}
-
-#csharp {
-  width: 80%;
-  height: 20px;
-  background-color: #4CAF50;
-  text-align: center
-}
-
+/* 0.5 year */
 #r {
-  width: 80%;
+  width: 10%;
   height: 20px;
   background-color: #4CAF50;
   text-align: center
 }
 
+/* 0.5 year */
+#php {
+  width: 10%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/* 0.5 year */
+#perl {
+  width: 10%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/* 2 year */
+#c {
+  width: 40%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/* 0.5 year */
+#cxx {
+  width: 10%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/* 0.5 year */
+#csharp {
+  width: 10%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/* beginner */
+#kotlin {
+  width: 5%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: center
+}
+
+/* beginner */
 #swift {
-  width: 60%;
+  width: 5%;
   height: 20px;
   background-color: #4CAF50;
   text-align: center
 }
 
+/* beginner */
 #oc {
-  width: 60%;
+  width: 5%;
   height: 20px;
   background-color: #4CAF50;
   text-align: center
 }
 
 /*database*/
+/* 2 years */
 #mysql {
-  width: 85%;
+  width: 40%;
   height: 20px;
   background-color: #9ACD32;
   text-align: center
 }
 
+/* 0.5 years */
 #mongodb {
-  width: 85%;
+  width: 10%;
   height: 20px;
   background-color: #9ACD32;
   text-align: center
 }
 
+/* 1 years */
 #oracle {
-  width: 80%;
+  width: 20%;
   height: 20px;
   background-color: #9ACD32;
   text-align: center
 }
 
+/* 1 years */
 #sqlite {
-  width: 75%;
+  width: 20%;
   height: 20px;
   background-color: #9ACD32;
   text-align: center
 }
 
+/* 0.5 years */
 #redis {
-  width: 70%;
+  width: 10%;
   height: 20px;
   background-color: #9ACD32;
   text-align: center
 }
 
 /*web development*/
+/* 4 years */
 #html {
-  width: 90%;
-  height: 20px;
-  background-color: #008080;
-  text-align: center
-}
-
-#css {
-  width: 90%;
-  height: 20px;
-  background-color: #008080;
-  text-align: center
-}
-
-#bootstrap {
   width: 80%;
   height: 20px;
   background-color: #008080;
   text-align: center
 }
 
+/* 2 years */
+#css {
+  width: 40%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/* 1 years */
+#bootstrap {
+  width: 20%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/* 0.5 years */
 #ajax {
-  width: 75%;
+  width: 10%;
   height: 20px;
   background-color: #008080;
   text-align: center
 }
 
-#jquery {
-  width: 70%;
-  height: 20px;
-  background-color: #008080;
-  text-align: center
-}
-
-#angular {
-  width: 30%;
-  height: 20px;
-  background-color: #008080;
-  text-align: center
-}
-
-#restful {
-  width: 60%;
-  height: 20px;
-  background-color: #008080;
-  text-align: center
-}
-
-#googlemap {
-  width: 60%;
-  height: 20px;
-  background-color: #008080;
-  text-align: center
-}
-
+/* 0.5 years */
 #react {
-  width: 70%;
+  width: 10%;
   height: 20px;
   background-color: #008080;
   text-align: center
 }
 
+/* 0.5 years */
+#jquery {
+  width: 10%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/* beginner */
+#angular {
+  width: 5%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/* 0.5 years */
+#restful {
+  width: 10%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/* 0.5 years */
+#googlemap {
+  width: 10%;
+  height: 20px;
+  background-color: #008080;
+  text-align: center
+}
+
+/* beginner */
 #gulp {
-  width: 50%;
+  width: 5%;
   height: 20px;
   background-color: #008080;
   text-align: center
 }
 
+/* beginner */
 #sass {
-  width: 50%;
+  width: 5%;
   height: 20px;
   background-color: #008080;
   text-align: center
 }
 
+/* beginner */
 #socket {
-  width: 50%;
+  width: 5%;
   height: 20px;
   background-color: #008080;
+  text-align: center
+}
+
+/*server and frameworks*/
+/* 2 years */
+#apache {
+  width: 40%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+/* 0.5 years */
+#express {
+  width: 10%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+/* beginner */
+#laravel {
+  width: 5%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+/* beginner */
+#django {
+  width: 5%;
+  height: 20px;
+  background-color: #D2691E;
+  text-align: center
+}
+
+/* beginner */
+#flask {
+  width: 5%;
+  height: 20px;
+  background-color: #D2691E;
   text-align: center
 }
 
 /*android development*/
+/* 2 years */
 #android_studio {
-  width: 95%;
+  width: 40%;
   height: 20px;
   background-color: #F4A460;
   text-align: center
 }
 
+/* 2 years */
 #gradle {
-  width: 90%;
+  width: 40%;
   height: 20px;
   background-color: #F4A460;
   text-align: center
 }
 
 /*system*/
+/* 0.5 years */
 #mac {
-  width: 90%;
+  width: 10%;
   height: 20px;
   background-color: #FFDEAD;
   text-align: center
 }
 
+/* 2 years */
 #linux {
-  width: 90%;
+  width: 40%;
   height: 20px;
   background-color: #FFDEAD;
   text-align: center
 }
 
+/* 6 years */
 #windows {
-  width: 85%;
+  width: 120%;
   height: 20px;
   background-color: #FFDEAD;
   text-align: center
 }
 
-
-/*server and frameworks*/
-#apache {
-  width: 90%;
-  height: 20px;
-  background-color: #D2691E;
-  text-align: center
-}
-
-#express {
-  width: 90%;
-  height: 20px;
-  background-color: #D2691E;
-  text-align: center
-}
-
-#laravel {
-  width: 50%;
-  height: 20px;
-  background-color: #D2691E;
-  text-align: center
-}
-
-#django {
-  width: 60%;
-  height: 20px;
-  background-color: #D2691E;
-  text-align: center
-}
 
 /*Some other IDE/text editor I like*/
+/* 1 years */
 #vscode {
-  width: 90%;
+  width: 20%;
   height: 20px;
   background-color: #A0522D;
   text-align: center
 }
 
+/* 1 years */
 #sublime {
-  width: 85%;
+  width: 20%;
   height: 20px;
   background-color: #A0522D;
   text-align: center
 }
 
+/* 0.5 years */
 #pycharm {
-  width: 70%;
+  width: 10%;
   height: 20px;
   background-color: #A0522D;
   text-align: center
 }
 
+/* Beginner */
 #xcode {
-  width: 70%;
+  width: 5%;
   height: 20px;
   background-color: #A0522D;
   text-align: center
 }
 
 /*java development*/
+/* 3 years */
 #eclipse {
-  width: 90%;
-  height: 20px;
-  background-color: #B22222;
-  text-align: center
-}
-
-#tomcat {
-  width: 75%;
-  height: 20px;
-  background-color: #B22222;
-  text-align: center
-}
-
-#jdbc {
-  width: 85%;
-  height: 20px;
-  background-color: #B22222;
-  text-align: center
-}
-
-#jspservlet {
-  width: 80%;
-  height: 20px;
-  background-color: #B22222;
-  text-align: center
-}
-
-#spring {
-  width: 80%;
-  height: 20px;
-  background-color: #B22222;
-  text-align: center
-}
-
-#javafx {
   width: 60%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+/* 0.5 years */
+#tomcat {
+  width: 10%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+/* 0.5 years */
+#jdbc {
+  width: 10%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+/* 1 years */
+#jspservlet {
+  width: 20%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+/* 1 years */
+#spring {
+  width: 10%;
+  height: 20px;
+  background-color: #B22222;
+  text-align: center
+}
+
+/* 0.5 years */
+#javafx {
+  width: 10%;
   height: 20px;
   background-color: #B22222;
   text-align: center
@@ -397,50 +479,57 @@ body {
 
 
 /*big data*/
+/* 0.5 years */
 #hadoop {
-  width: 80%;
+  width: 10%;
   height: 20px;
   background-color: #B22222;
   text-align: center
 }
 
+/* 0.5 years */
 #hdfs {
-  width: 70%;
+  width: 10%;
   height: 20px;
   background-color: #B22222;
   text-align: center
 }
 
+/* Beginner */
 #mapreduce {
-  width: 70%;
+  width: 5%;
   height: 20px;
   background-color: #B22222;
   text-align: center
 }
 
+/* Beginner */
 #zookeeper {
-  width: 40%;
+  width: 5%;
   height: 20px;
   background-color: #B22222;
   text-align: center
 }
 
+/* Beginner */
 #spark {
-  width: 20%;
+  width: 5%;
   height: 20px;
   background-color: #B22222;
   text-align: center
 }
 
+/* Beginner */
 #hbase {
-  width: 20%;
+  width: 5%;
   height: 20px;
   background-color: #B22222;
   text-align: center
 }
 
+/* Beginner */
 #hive {
-  width: 20%;
+  width: 5%;
   height: 20px;
   background-color: #B22222;
   text-align: center

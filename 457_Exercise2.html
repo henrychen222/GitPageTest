@@ -1,0 +1,375 @@
+<html>
+ <head>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" type="text/css"
+    href="http://wenchen.cs.und.edu/css/1.css" />
+  <title>Programming Exercise II: A native mobile app for a bookstore</title>
+ </head>
+
+ <body text="#000000" vLink="#3366CC" link="#3366CC" bgColor="#ffffff" alink="#3366CC" background="view-source:http://wenchen.cs.und.edu/figure/bg110.png">
+
+<center>
+ <font color="#3366CC" face="Helvetica" size="+2">
+  <b>Programming Exercise II: A Native Mobile App for a Bookstore</b>
+ </font><br class="s" />
+ <font face="comic sans ms" color="#3366CC" size="+1">
+  <b>(Industry-Level, Second-to-None Comprehensive Specifications)</b>
+ </font>
+</center>
+
+<hr color="#3366CC" size="4" noshade>
+<br class="s" />
+
+<center>
+ <font color="#3366CC" face="Helvetica" size="+1">
+  <b>Absolutely no copying others' works</b>
+ </font>
+</center>
+<br class="m" />
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Development Requirements</b>
+</font><br />
+
+When start developing the exercise, follow the requirements below:
+
+<ul>
+ <li>Superuser (managing the bookstore through desktop web browsers):
+  <br /><br class="e" />
+  <ul>
+   <li>Have to use the LAMP technologies consisting of Linux, Apache, MySQL, and PHP/Perl/Python.
+   </li><br class="e" />
+
+   <li>The system entry page must be located at <nobr><code>http://people.aero.und.edu/~userid/457/2/</code></nobr> and all pages must be hosted by <nobr><code>http://people.aero.und.edu/~userid/</code></nobr> .
+   </li>
+  </ul>
+ </li><br class="s" />
+
+ <li>Customers (interacting with the bookstore through emulators/smartphones):
+  <br /><br class="e" />
+  <ul>
+   <li>Have to use <a href="https://developer.android.com/studio/index.html">Android Studio</a> to create a native mobile app, instead of a mobile website.
+   </li><br class="e" />
+
+   <li>The exercise should be located at <code>C:\457\Bookstore\</code> .
+   </li>
+  </ul>
+ </li><br class="e" />
+
+ <li>The book and customer data should be saved to and retrieved from the server-side MySQL database at the Aerospace school.
+ </li><br class="e" />
+
+</ul>
+
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Due Date and Submission Methods</b>
+</font><br />
+
+Monday, April 10, 2017 in class and have completed the following three tasks:
+
+<ul>
+ <li>Turn in printouts of all source code (no documentation needed) including Java, XML, PHP, SQL <code>create</code> statements, and whatever languages.
+  The code will be examined during the demonstration too.
+ </li><br class="e" />
+
+ <li>Send an email to the instructor at <a href="mailto:wenchen@cs.und.edu">wenchen@cs.und.edu</a> to set up an appointment to demonstrate your exercise to the instructor individually, so misunderstanding would be minimized. 
+  The mail lists the times you will be available.
+  The instructor will prepare a set of test data to be used by all students.
+ </li><br class="e" />
+
+ <li>Students may save the whole app in a flash drive and demo it at a classroom or conference-room machine.
+ </li>
+</ul>
+
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+ 
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Objectives</b>
+</font><br />
+
+This exercise is to design and implement a native mobile app on Android devices.
+
+Students learn how to build a mobile app connecting to the servers. 
+
+<br /><br class="m" />
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Requirements</b>
+</font><br />
+
+This exercise is to build an app for a local bookstore by using Android Studio.
+
+It includes the following requirements:
+
+<ul>
+
+ <li>The data of a book includes
+  <ul>
+   <li>a unique ISBN (10 characters),
+   </li>
+   <li>a unique title, and
+   </li>
+   <li>a price.
+   </li>
+  </ul> 
+ </li><br class="m" />
+
+ <li>The data of a customer includes
+  <ul>
+   <li>a unique ID assigned by the system automatically after signing up,
+   </li>
+   <li>a name,
+   </li>
+   <li>the information of the all purchased books (one quantity for each book and no duplicate books), and
+   </li>
+   <li>the total amount spent on the purchased books (one amount per customer).
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>[Superuser (managing the bookstore through desktop web browsers): 20% total]</b><br />
+  For the one and only one superuser:
+  <br /><br class="e" />
+  <ul>
+   <li><b>(Entering books: 05%)</b>
+    Enter books one by one.
+   </li><br class="e" />
+
+   <li><b>(Listing all books: 05%)</b>
+    List all books each including (i) an ISBN, (ii) a title, and (iii) a price.
+   </li><br class="e" />
+
+   <li><b>(Listing all customers: 05%)</b>
+    List all customers each including (i) an ID, (ii) a hyperlinked name, and (iii) a total amount.
+   </li><br class="e" />
+
+   <li><b>(Listing all purchased books: 05%)</b>
+    After clicking the hyperlinked name, list all books, each of which includes a title and a quantity, purchased by the customer.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>[Customers (interacting with the bookstore via emulators/smartphones): 60% total]</b><br />
+  For each customer:
+  <br /><br class="e" />
+  <ul>
+   <li><b>(Signing up, in, and out: 10%)</b>
+    Customer can sign up, in, and out. 
+   </li><br class="e" />
+
+   <li><b>[Searching for books: 20% (undergraduate) and 10% (graduate)]</b>
+    List a book if its title includes any of the case-insensitive keywords in a query, where the keywords are separated by spaces.
+    If the query is empty, list all books.
+    The search results are a list of books, each including (i) a checkbox (for purchasing), (ii) a hyperlinked title, and (iii) a quantity to purchase (in an input form such as <code><a href="https://developer.android.com/reference/android/widget/EditText.html">EditText</a></code>). 
+   </li><br class="e" />
+
+   <li><b>[Ranking: 10% (graduate students only)]</b>
+    The search results are also sorted based on the length of <a href="https://en.wikipedia.org/wiki/Longest_common_subsequence_problem">LCS (Longest Common Subsequence)</a>.
+   </li><br class="e" />
+
+   <li><b>(Purchasing books: 15%)</b>
+    After searching for books, purchase several books (but not all the listed books) at the same time. 
+    Add the quantities to purchase to the existing quantities in the database.
+   </li><br class="e" />
+
+   <li><b>(Checking his/her own account: 10%)</b>
+    List the customer’s (i) ID, (ii) name, (iii) titles of all purchased books including a quantity for each book, and (iv) total amount.
+   </li><br class="s" />
+
+   <li><b>(Showing the details of a book: 05%)</b>
+    List the book’s (i) ISBN, (ii) title, and (iii) price by clicking its hyperlinked title.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>(Instructor's requirements: 20% total)</b><br />
+  Other than the above system requirements, the instructor has the following requirements:
+  <br /><br class="e" />
+<ul>
+
+ <li><b>(User-friendliness: 15%)</b>
+  User-friendliness will be heavily considered when grading.
+  In the past, some exercises were awkward, which made the grading or browsing difficult.
+ </li><br class="e" />
+
+ <li><b>(System reset: 05%)</b>
+  The system can be reset, which is to clear all data stored in the database and files, so the instructor can test the system by using only his own test data.
+  That is the system has to include a button such as &#8220;Clear system&#8221; at the system entry page.
+ </li>
+
+</ul>
+ </li>
+</ul>
+
+<hr color="#3366CC" size="3" noshade>
+<br class="s" />
+
+<!=======================================================================!>
+
+<font color="#3366CC" face="Helvetica" size="+1">
+ <b>Evaluations</b>
+</font><br />
+
+The following features will be considered when grading:
+
+<ul>
+ <li><b>Specifications:</b>
+  <ul>
+   <li>The instructor (or your assumed client) has given the exercise specifications as detailedly as possible.
+    If you are confused about the specifications, you should ask in advance.
+    Study the specifications very carefully.
+    No excuses for misunderstanding or missing parts of the specifications after grading.
+   </li>
+
+   <li>The specifications are not possible to cover every detail.
+    You are free to implement the issues not mentioned in the specifications, but the implementations should make sense.
+       Implemented functions lacking of common sense may cause the instructor to grade your exercise mistakenly, and thus lower your grade. 
+   </li>
+
+   <li>The exercise must meet the specifications.
+    However, exercises with functions exceeding the specifications will not receive extra credits.
+   </li>
+  </ul>
+ </li><br class="m" />
+    
+ <li><b>Grading:</b>
+  <ul>
+   <li>This exercise will not be graded if the submission methods are not met.
+       Students take full responsibility if the app is not working.
+   </li>
+   <li>A set of test data will be used for all students.
+    The grades are primarily based on the results of testing.
+    Other factors such as performance, programming styles, algorithms, and data structures will be only considered minimally.
+   </li>
+   <li>Before submitting the exercise, test it comprehensively.
+       Absolutely no extra points will be given after grading.
+   </li>
+   <li>The total weight of exercises is 36% of final grade and all three exercises have the same weight, 12% each.
+   </li>
+   <li>If not specified, no error checking is required; i.e., you may assume the input is always correct for that case.
+   </li>
+   <li>Feel free to design your own interfaces; user-friendliness will be heavily considered; each function/button will be tested extensively; and from the source code submitted, the database design and programs will be examined. 
+   </li>
+   <li>The systems have to be active and the exercise printouts will be kept until the end of this semester.
+    They will be used to check against others’ exercises for any plagiarism.
+    The instructor will inform you the exercise evaluations by emails after grading.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>Desktop web browsers:</b><br />
+  <ul>
+   <li>Desktop web browser will be used by the superuser to manage the bookstore.
+   </li>
+   <li>Firefox 51.0 or above browser will be used to grade exercises. 
+    Note that Internet Explorer, Chrome, and Firefox are not compatible.
+    That is your exercises may work on the IE or Chrome but not Firefox. 
+   </li>
+  </ul>
+ </li><br class="m" />
+
+
+ <li><b>Android platform:</b>
+  <ul>
+   <li>Android platform has to be used.
+   </li>
+   <li>Since no advanced Android features need to be used, the following SDK (Software Development Kit) and IDE (Integrated Development Environment) will be used to grade exercises:
+    <br /><br class="e" />
+    <ul>
+     <li>Android SDK 6.0, API 23,</li>
+     <li>Android Studio 1.3, and</li>
+     <li>Android Virtual Device (AVD) (3.7&#8221; FWVGA slider and Lollipop API level 22).</li>
+    </ul><br class="e" />
+
+    Make sure that your app works for the SDK and AVD.
+   </li>
+   <li>Android emulator (AVD) will be used by the customers to interact with the bookstore.
+   </li>
+   <li>No mobile browser will be used to check your app.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>MySQL database:</b><br />
+  <ul>
+   <li>MySQL database at the Aerospace School has to be used to save and retrieve book and customer data.
+   </li>
+
+   <li>The SQL DDL commands such as &#8220;<code>create table</code>&#8221; have to be submitted, where SQL is Structured Query Language and DDL is Data Definition Language.
+   </li>
+
+   <li>From the source code submitted, the database design and programs will be examined.
+    Poor database design or uses will result in a lower grade.
+   </li>
+
+   <li><b>(-05%)</b> if the database design is NOT optimal.
+   </li>
+
+   <li><b>(-05%)</b> if the SQL <code>create</code> commands of database implementation are NOT submitted.
+   </li>
+
+   <li>Android includes an embedded database, <a href="http://people.aero.und.edu/~wenchen/course/513/week13/">SQLite</a>, which has limited storage and functionality.
+    You can use it to save other data, except book and customer data.
+   </li>
+   <li>Try to perform the tasks by using SQL (Structured Query Language) as much as possible because SQL, a non-procedural language, can save you a great deal of programming effort.
+    The same is applied to the server-side PHP programming because client-side Java programming is more difficult.
+   </li>
+
+   <li>There are many advantages of using databases.
+    If database is not used, the problems caused by not-using-transaction must be considered.
+    For example, if two customers are enrolled at the same time, an ID may be assigned to different customers if databases are not used.
+   </li>
+  </ul>
+ </li><br class="m" />
+
+ <li><b>Comments:</b>
+  <ul>
+   <li>Make the exercise work first.
+    Do not include extra features, such as passwords, in the beginning.
+    By the way, you will not receive credits for the extra features.
+   </li>
+   <li>One way to build a mobile-commerce system from scratch is to design the user interfaces first and then implement the system button by button.
+    By doing this way, it could simplify the construction. 
+    The recommended construction steps are
+
+    <br><br class="s">
+    <ol type="i">
+     <li>Database design (E-R modeling or normalization),</li>
+     <li>Database implementation (SQL),</li>
+     <li>Interface building (XML), and</li>
+     <li>Button-by-button implementation (Java and PHP).</li>
+    </ol><br class="s">
+   </li>
+
+   <li>Each function can be accomplished by either client or server -side scripts, or both. 
+   </li>
+
+   <li>Many times, simplicity is the same as user-friendliness. 
+   </li>
+
+   <li>Security concerns are mainly ignored here.
+    For example, a customer may be able to check others’ account information if protection is not enforced.
+    Small or medium -size businesses do not usually implement their own secure payment schemes.
+    Instead they use a third-party payment system such as <a href="http://www.paypal.com">PayPal</a> or purchase software from company like <a href="http://www.cayan.com">Cayan</a> and integrate it with their websites.
+   </li>
+
+   <li>The function of automatically sending emails/texts is important for m-commerce systems, but will not be used here since companies complained our students sending out numerous mails because of faulty programs.
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  <br /><br /><br /><br /><br />
+ </body>
+</html>
+
